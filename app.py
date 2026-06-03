@@ -180,7 +180,7 @@ elif page == "📊 Model Performance & Charts":
         rf_prob = np.asarray(rf_prob).ravel()
         xgb_prob = np.asarray(xgb_prob).ravel()
         RocCurveDisplay.from_predictions(y_test, rf_prob, name="Random Forest", ax=ax_roc)
-        RocCurveDisplay.from_predictions(y_test, xgb_prob, name="XGBoost", ax=ax_roc, linestyle="--")
+        RocCurveDisplay.from_predictions(y_test, xgb_prob, name="XGBoost", ax=ax_roc)
         ax_roc.plot([0, 1], [0, 1], 'k--')
         ax_roc.set_title("Receiver Operating Characteristic")
         ax_roc.legend(loc="lower right")
