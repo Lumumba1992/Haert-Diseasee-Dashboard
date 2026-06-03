@@ -350,6 +350,6 @@ elif page == "🔍 Explainability (SHAP)":
 
 # Footer
 st.sidebar.markdown("---")
-st.sidebar.markdown("Built with ❤️ using Streamlit & SHAP")
+st.sidebar.markdown("Built by Researchers From CDAM")
 
 ## %
