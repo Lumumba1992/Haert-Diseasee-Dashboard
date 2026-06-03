@@ -175,14 +175,21 @@ elif page == "📊 Model Performance & Charts":
     col1, col2 = st.columns(2)
     
     with col1:
-        st.subheader("📈 ROC-AUC Curve")
-        fig_roc, ax_roc = plt.subplots(figsize=(6, 5))
-        RocCurveDisplay.from_predictions(y_test, rf_prob, name="Random Forest", ax=ax_roc, color="#1f77b4")
-        RocCurveDisplay.from_predictions(y_test, xgb_prob, name="XGBoost", ax=ax_roc, color="#ff7f0e", linestyle="--")
-        ax_roc.plot([0, 1], [0, 1], 'k--', label='Random Chance')
-        ax_roc.set_title('Receiver Operating Characteristic')
-        ax_roc.legend(loc='lower right')
-        st.pyplot(fig_roc)
+    st.subheader("📈 ROC-AUC Curve")
+
+    fig_roc, ax_roc = plt.subplots(figsize=(6, 5))
+
+    rf_prob = np.asarray(rf_prob).ravel()
+    xgb_prob = np.asarray(xgb_prob).ravel()
+
+    RocCurveDisplay.from_predictions(y_test, rf_prob, name="Random Forest", ax=ax_roc)
+    RocCurveDisplay.from_predictions(y_test, xgb_prob, name="XGBoost", ax=ax_roc, linestyle="--")
+
+    ax_roc.plot([0, 1], [0, 1], 'k--')
+    ax_roc.set_title("Receiver Operating Characteristic")
+    ax_roc.legend(loc="lower right")
+
+    st.pyplot(fig_roc)
         
     with col2:
         st.subheader("🎯 Confusion Matrix (Random Forest)")
