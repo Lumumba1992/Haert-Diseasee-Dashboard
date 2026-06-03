@@ -134,7 +134,7 @@ feature_names = ['Age', 'RestBP', 'Chol', 'MaxHR', 'Oldpeak', 'Ca', 'Sex', 'Ches
 # ==========================================
 # 4. SIDEBAR NAVIGATION
 # ==========================================
-st.sidebar.title("❤️ CardioPredict AI")
+st.sidebar.title("🩺 CardioPredict AI")
 st.sidebar.markdown("### Navigation")
 page = st.sidebar.radio("Go to:", [
     "🏠 Dashboard Overview",
