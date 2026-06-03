@@ -30,6 +30,17 @@ from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_s
 warnings.filterwarnings('ignore')
 st.set_page_config(page_title="CardioPredict AI", page_icon="❤️", layout="wide")
 
+st.markdown(
+    """
+    <div style="text-align:center; padding:10px 0;">
+        <h2>CardioPredict AI</h2>
+        <h4>Center for Data Analytics and Modeling - Chuka University</h4>
+        <p><b>Authors:</b> Prof. Dennis K. Muriithi | Lumumba W. Victor</p>
+        <hr>
+    </div>
+    """,
+    unsafe_allow_html=True
+)
 # ==========================================
 # CUSTOM CSS: INCREASE SIDEBAR FONT SIZE
 # ==========================================
