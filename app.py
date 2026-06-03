@@ -28,7 +28,11 @@ from sklearn.metrics import (accuracy_score, precision_score, recall_score, f1_s
                              RocCurveDisplay, ConfusionMatrixDisplay)
 
 warnings.filterwarnings('ignore')
-st.set_page_config(page_title="CardioPredict AI", page_icon="❤️", layout="wide")
+st.set_page_config(
+    page_title="CardioPredict AI",
+    page_icon="📊",
+    layout="wide"
+)
 
 st.markdown(
     """
